@@ -1,0 +1,42 @@
+{
+    "name": "unitedprofile/mini-framework",
+    "type": "project",
+    "description": "Start framework",
+    "license": "proprietary",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "Alex Giers",
+            "email": "alex@unitedprofile.se"
+        },
+        {
+            "name": "Emil Malm",
+            "email": "emil@unitedprofile.se"
+        }
+    ],
+    "require": {
+        "nikic/fast-route": "^1.2",
+        "guzzlehttp/psr7": "^1.6",
+        "guzzlehttp/guzzle": "^6.5",
+        "pimple/pimple": "^3.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "SITE\\": "./src/"
+        },
+        "files": [
+            "./config/config.php"
+        ]
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "./packages/*"
+        }
+    ],
+    "scripts": {
+        "analyse": [
+            "phpstan analyse app src public -c phpstan.neon --level 4"
+        ]
+    }
+}

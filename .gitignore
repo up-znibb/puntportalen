@@ -1,0 +1,4 @@
+./packages
+./node_modules
+./vendor
+./config/config.php
